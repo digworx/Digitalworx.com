@@ -26,9 +26,9 @@ var minifyCSS = require("gulp-minify-css");
 var zip = require("gulp-zip")
 
 // Path variables
-var IMAGES_PATH = 'img/**/*.{png,jpeg,jpg,svg,gif}';
-var IMAGES_DEST = 'dist/img';
-var DIST_PATH = 'dist';
+var IMAGES_PATH = 'public/img/**/*.{png,jpeg,jpg,svg,gif}';
+var IMAGES_DEST = 'public/dist/img';
+var DIST_PATH = 'public/dist';
 
 // Compress images
  gulp.task('images', function() {
@@ -52,7 +52,7 @@ var DIST_PATH = 'dist';
 // Styles: Concat, List Errors, Minify, create Source Maps
 gulp.task('styles', function() {
 	console.log('Starting Styles Task')
-	return gulp.src(['css/normalize.css', 'css/hamburger.css', 'css/flexslider.css', 'css/awwwards.css', 'css/animate.css', 'css/main.css'])
+	return gulp.src(['public/css/normalize.css', 'public/css/hamburger.css', 'public/css/flexslider.css', 'public/css/awwwards.css', 'public/css/animate.css', 'public/css/main.css'])
 		.pipe(plumber(function (err){
 			console.log('Styles Task Error');
 			console.log(err);
@@ -64,7 +64,7 @@ gulp.task('styles', function() {
 		.pipe(minifyCSS())
 		.pipe(sourcemaps.write())
 	    .pipe(rename({ suffix: ".min" }))
-		.pipe(gulp.dest('dist'))
+		.pipe(gulp.dest('public/dist'))
 		.pipe(notify({ title: "Gulp Recipes", message: "Styles Task: Success!", onLast: true }));
 });
 
@@ -72,7 +72,7 @@ gulp.task('styles', function() {
 // Scripts: Concat, List Errors, Minify, create Source Maps
 gulp.task('scripts', function() {
 	console.log('Starting Scripts Task')
-	return gulp.src(['js/*.js', '!js/**/*.min.js', '!js/**/*-min.js'])
+	return gulp.src(['public/js/*.js', '!public/js/**/*.min.js', '!public/js/**/*-min.js'])
 		.pipe(plumber(function (err){
 			console.log('Scripts Task Error');
 			console.log(err);
@@ -83,14 +83,14 @@ gulp.task('scripts', function() {
 		.pipe(concat('scripts.js'))
 		.pipe(sourcemaps.write())
 		.pipe(rename({ suffix: ".min" }))
-		.pipe(gulp.dest('dist'))
+		.pipe(gulp.dest('public/dist'))
 		.pipe(notify({ title: "Gulp Recipes", message: "Scripts Task: Success!", onLast: true }));
 });
 
 
 // Check all javascript files for errors
 gulp.task('lint', function() {
-  return gulp.src('./js/*.js')
+  return gulp.src('public/js/*.js')
     .pipe(jshint())
     .pipe(jshint.reporter('jshint-stylish'))
 	.pipe(notify({ message: "JShint: Finished", onLast: true }));
@@ -101,17 +101,10 @@ gulp.task('lint', function() {
 gulp.task('browserSync', function() {
   browserSync.init({
     server: {
-      baseDir: './'
+      baseDir: './public'
     },
 	  browser: "google chrome"
   })
-});
-
-// Export site to zipped file
-gulp.task('export', function() { 
-	return gulp.src(['./**', '!./{node_modules,node_modules/**}'])
-		.pipe(zip('digworx_site.zip'))
-		.pipe(gulp.dest('./'))
 });
 
 
@@ -119,11 +112,11 @@ gulp.task('export', function() {
 gulp.task('watch', ['browserSync'], function () {
   console.log('Starting Watch Tasks')
   // Reloads the browser whenever CSS files change
-  gulp.watch('css/**/*.css', ['styles:reload']); 
+  gulp.watch('public/css/**/*.css', ['styles:reload']); 
   // Reloads the browser whenever HTML or JS files change
-  gulp.watch('*.html', browserSync.reload); 
-  gulp.watch('js/**/*.js', ['scripts:reload']);
-  gulp.watch('img/**', ['images:reload']);
+  gulp.watch('public/*.html', browserSync.reload); 
+  gulp.watch('public/js/**/*.js', ['scripts:reload']);
+  gulp.watch('public/img/**', ['images:reload']);
 });
 
 gulp.task('styles:reload', ['styles'], function () {
@@ -139,7 +132,6 @@ gulp.task('images:reload', ['images'], function() {
 });
 
 
-
 // Delete existing files in Dist folder before running Gulp tasks
 gulp.task('clean:dist', function() {
   console.log('Starting Clean:Dist Task')
@@ -147,6 +139,7 @@ gulp.task('clean:dist', function() {
 	  DIST_PATH
   ]);
 });
+
 
 
 // Production build task
@@ -162,6 +155,12 @@ gulp.task('old', function (callback) {
   )
 });
 
+// Export site to zipped file
+gulp.task('export', function() { 
+	return gulp.src(['./**', '!./{node_modules,node_modules/**}'])
+		.pipe(zip('digworx_site.zip'))
+		.pipe(gulp.dest('./'))
+});
 
 
 
