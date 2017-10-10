@@ -1,0 +1,58 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+
+                                
+    /* TEAM */
+
+                                
+    Owner/Design & Development Director: Monty George
+
+                                
+    Site: monty@digworx.com
+
+                                
+    Twitter: @digworx
+
+                                
+    Location: Evanston, IL, USA
+
+                             
+
+                 
+                        [...]
+						
+
+
+    							
+    /* THANKS */
+
+    							
+    Name: name or url
+
+    						
+
+                 
+                        [...]
+                        
+
+
+                                
+    /* SITE */
+
+                                
+    Last update: 2017/02/16
+
+                                
+    Standards: HTML5, CSS3,..
+
+                                
+    Components: Modernizr, jQuery, etc.
+
+                                
+    Software: Software used for the development
+       
+                            
+
+
+                    
