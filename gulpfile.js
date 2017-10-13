@@ -5,6 +5,7 @@ var gulp = require('gulp');
 
 // Include plugins
 var jshint = require('gulp-jshint');
+var jshintStylish = require ('jshint-stylish')
 var plumber = require('gulp-plumber');
 var uglify = require('gulp-uglify');
 var pump = require('pump');
@@ -60,10 +61,10 @@ gulp.task('styles', function() {
 	}))
 		.pipe(sourcemaps.init())
 		.pipe(autoprefixer())
-		.pipe(concat('styles.css'))
+		.pipe(concat('styles.css'))  //Concats to this file
 		.pipe(minifyCSS())
-		.pipe(sourcemaps.write())
-	    .pipe(rename({ suffix: ".min" }))
+		.pipe(sourcemaps.write())  //Create sourcemaps after concatenation
+	    .pipe(rename({ suffix: ".min" }))  //Adds .min suffix
 		.pipe(gulp.dest('public/dist'))
 		.pipe(notify({ title: "Gulp Recipes", message: "Styles Task: Success!", onLast: true }));
 });
@@ -85,15 +86,6 @@ gulp.task('scripts', function() {
 		.pipe(rename({ suffix: ".min" }))
 		.pipe(gulp.dest('public/dist'))
 		.pipe(notify({ title: "Gulp Recipes", message: "Scripts Task: Success!", onLast: true }));
-});
-
-
-// Check all javascript files for errors
-gulp.task('lint', function() {
-  return gulp.src('public/js/*.js')
-    .pipe(jshint())
-    .pipe(jshint.reporter('jshint-stylish'))
-	.pipe(notify({ message: "JShint: Finished", onLast: true }));
 });
 
 
@@ -148,6 +140,14 @@ gulp.task('default', function (callback) {
 });
 
 
+// Check all javascript files for errors
+gulp.task('jshint', function() {
+  return gulp.src('public/js/*.js')
+    .pipe(jshint())
+    .pipe(jshint.reporter('jshint-stylish'))
+	.pipe(notify({ message: "JShint: Finished", onLast: true }));
+});
+
 
 // Export site to zipped file
 gulp.task('export', function() { 
@@ -159,12 +159,18 @@ gulp.task('export', function() {
 
 
 
+
+
+
+// OLD TASKS ARCHIVE BELOW
+
 // Old task - don't use
 gulp.task('old', function (callback) {
   runSequence(['styles', 'browserSync', 'watch'],
     callback
   )
 });
+
 
 // Alternative gulp task runners below, not using runSequence, but instead running the tasks in brackets first. Keep for reference, don't use since tasks need to be run in particular sequence.
 
@@ -178,7 +184,6 @@ gulp.task('production-NA', ['clean:dist', 'images', 'styles', 'scripts'], functi
 gulp.task('default-NA', ['clean', 'styles', 'scripts', 'watch'], function () {
   console.log('Starting default task')
 });
-
 
 
 // Concatenate and minify JS files
