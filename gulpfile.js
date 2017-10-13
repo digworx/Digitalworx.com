@@ -142,30 +142,31 @@ gulp.task('clean:dist', function() {
 
 
 
-// Production build task
+// Default production build task
 gulp.task('default', function (callback) {
   runSequence('clean:dist', ['images', 'styles', 'scripts'], 'watch', callback)
 });
 
 
-// Default task
+
+// Export site to zipped file
+gulp.task('export', function() { 
+	return gulp.src(['public/**', '!./{node_modules,node_modules/**}'])
+		.pipe(zip('digworx_site.zip'))
+		.pipe(gulp.dest('public'))
+		.pipe(notify({ title: "Gulp Recipes", message: "Project zipped file: Success!", onLast: true }));
+});
+
+
+
+// Old task - don't use
 gulp.task('old', function (callback) {
   runSequence(['styles', 'browserSync', 'watch'],
     callback
   )
 });
 
-// Export site to zipped file
-gulp.task('export', function() { 
-	return gulp.src(['./**', '!./{node_modules,node_modules/**}'])
-		.pipe(zip('digworx_site.zip'))
-		.pipe(gulp.dest('./'))
-});
-
-
-
-
-// Alternative gulp task runners below, not using runSequence, but instead running the tasks in brackets first.
+// Alternative gulp task runners below, not using runSequence, but instead running the tasks in brackets first. Keep for reference, don't use since tasks need to be run in particular sequence.
 
 // Default task
 gulp.task('production-NA', ['clean:dist', 'images', 'styles', 'scripts'], function () {
