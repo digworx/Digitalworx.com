@@ -140,6 +140,7 @@ gulp.task('default', function (callback) {
 });
 
 
+
 // Check all javascript files for errors
 gulp.task('jshint', function() {
   return gulp.src('public/js/*.js')
