@@ -18,11 +18,7 @@
         <link rel="icon" href="../favicon.png" type="image/png">
         <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 
-        <link rel="stylesheet" href="../css/normalize.css">
-        <link rel="stylesheet" href="../css/hamburger.css">
-        <link rel="stylesheet" href="../css/flexslider.css">
-        <link rel="stylesheet" href="../css/animate.css">       
-        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../dist/styles.min.css">
 
         <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet"> 
 		
@@ -33,8 +29,7 @@
         <!-- jQuery -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-        <script src="../js/jquery.flexslider.js"></script>
-        <script src="../js/plugins.js"></script>
+
 
         
         <!--[if lt IE 9]>
@@ -53,17 +48,19 @@
         </noscript>
                 
         <nav id="mySidenav" class="sidenav">
+        	<div id="sideNavText">
             <a href="../index.html">Home</a>
             <a href="../work/work.html">Work</a>
             <a href="../about.html">About</a>
             <a href="../contact.html">Contact</a>
+			</div>
         </nav>
 
         <main class="site-wrap">
         
           <header id="top-header">
               <nav>
-                <h1 class="site-logo"><a href="../index.html"><img class="logo" src="../img/digworx_logo_K.svg" alt="Creative digital design agency in Evanston. We design and develop websites, emails, online ads."></a></h1>
+                <h1 class="site-logo"><a href="../index.html"><img class="logo" src="../dist/img/digworx_logo_K.svg" alt="Creative digital design agency in Evanston. We design and develop websites, emails, online ads."></a></h1>
                 <button class="hamburger hamburger--squeeze" type="button">
                   <span class="hamburger-box">
                   <span class="hamburger-inner"></span>
@@ -87,7 +84,7 @@
           	<div class="work-row">
             	<article class="client-work left">
                     <div class="client-grouping">
-                        <a href="work_newark.html"><img src="../img/newark_800.jpg" alt="Newark/element14"></a>
+                        <a href="work_newark.html"><img src="../dist/img/newark_800.jpg" alt="Newark/element14"></a>
                         <header>
                             <h4>
                             Newark element14
@@ -97,7 +94,7 @@
                 </article>
             	<article class="client-work right">
                     <div class="client-grouping">
-                        <a href="work_justrite.html"><img src="../img/justrite-work-800.jpg" alt="Justrite Manufacturing"></a>
+                        <a href="work_justrite.html"><img src="../dist/img/justrite-work-800.jpg" alt="Justrite Manufacturing"></a>
                          <header>
                             <h4>
                             Justrite
@@ -109,7 +106,7 @@
             <div class="work-row">
             	<article class="client-work left">
                       <div class="client-grouping">
-                        <a href="work_hilton.html"><img src="../img/hilton-work-800.jpg" alt="Hilton Honors"></a>
+                        <a href="work_hilton.html"><img src="../dist/img/hilton-work-800.jpg" alt="Hilton Honors"></a>
                     	<header>
                             <h4>
                             Hilton HHonors&trade;
@@ -119,7 +116,7 @@
                 </article>
             	<article class="client-work right">
                      <div class="client-grouping">
-                        <a href="work_bci.html"><img src="../img/bci_800.jpg" alt="Basic Concepts Inc."></a>
+                        <a href="work_bci.html"><img src="../dist/img/bci_800.jpg" alt="Basic Concepts Inc."></a>
                         <header>
                             <h4>
                             Basic Concepts Inc.
@@ -131,7 +128,7 @@
  			<div class="work-row">
             	<article class="client-work left">
                       <div class="client-grouping">
-                        <a href="work_converse.html"><img src="../img/converse-work-800.jpg" alt="Converse All-Star"></a>
+                        <a href="work_converse.html"><img src="../dist/img/converse-work-800.jpg" alt="Converse All-Star"></a>
                         <header>
                             <h4>
                             Converse All-Star
@@ -141,7 +138,7 @@
                 </article>
             	<article class="client-work right">
                     <div class="client-grouping">
-                        <a href="work_mdrt.html"><img src="../img/mdrt-cover-corner.jpg" alt="Harley-Davidson"></a>
+                        <a href="work_mdrt.html"><img src="../dist/img/mdrt-cover-corner.jpg" alt="Harley-Davidson"></a>
                     	<header class="long-header">
                             <h4>
                             Million Dollar Round Table
@@ -196,7 +193,7 @@
           <footer id="footer">
           	<div class="footer-group">
           	<section class="summary">
-            	<h4><img src="../img/digworx_logo_K.svg" alt="Digitalworx"></h4>
+            	<h4><img src="../dist/img/digworx_logo_K.svg" alt="Digitalworx"></h4>
                 <p class="cool-dash">—</p>
                 <p>We believe that design and storytelling matter and we never lose sight of that when designing and building brands and campaigns to promote and grow your organization.</p>
             </section>
@@ -212,7 +209,7 @@
                 <p class="cool-dash">—</p>
 				<p class="twitter"><a href="https://www.twitter.com/digitalworx" target="_blank" rel="noopener">Twitter</a></p>
 				<p class="facebook"><a href="http://www.facebook.com/digworx" target="_blank" rel="noopener">Facebook</a></p>
-				<p class="linkedin">om/company/digitalworx" target="_blank">LinkedIn</a></p>
+				<p class="linkedin"><a href="http://www.linkedin.com/company/digitalworx" target="_blank" rel="noopener">LinkedIn</a></p>           
             </section>
             </div>
             <div class="copyright">
@@ -223,11 +220,9 @@
           
         </main><!-- close .site-wrap --> 
 
-	
-		<script src="../js/easings.js"></script>
-        <script src="../js/plugins.js"></script>
+
         <script src="../js/jquery.waypoints.min.js"></script>
-        <script src="../js/main.js"></script>
+        <script src="../dist/scripts.min.js" async></script>
 
         <!-- Google Analytics -->
          <script>

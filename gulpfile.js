@@ -50,7 +50,7 @@ var DIST_PATH = 'public/dist';
 });
 
 
-// Styles: Concat, List Errors, Minify, create Source Maps
+// STYLES: Concat, List Errors, Minify, create Source Maps
 gulp.task('styles', function() {
 	console.log('Starting Styles Task')
 	return gulp.src(['public/css/normalize.css', 'public/css/hamburger.css', 'public/css/flexslider.css', 'public/css/awwwards.css', 'public/css/animate.css', 'public/css/main.css'])
@@ -70,7 +70,7 @@ gulp.task('styles', function() {
 });
 
 
-// Scripts: Concat, List Errors, Minify, create Source Maps
+// SCRIPTS: Concat, List Errors, Minify, create Source Maps
 gulp.task('scripts', function() {
 	console.log('Starting Scripts Task')
 	return gulp.src(['public/js/*.js', '!public/js/**/*.min.js', '!public/js/**/*-min.js'])
@@ -106,7 +106,7 @@ gulp.task('watch', ['browserSync'], function () {
   // Reloads the browser whenever CSS files change
   gulp.watch('public/css/**/*.css', ['styles:reload']); 
   // Reloads the browser whenever HTML or JS files change
-  gulp.watch('public/*.html', browserSync.reload); 
+  gulp.watch('public/**/*.html', browserSync.reload); 
   gulp.watch('public/js/**/*.js', ['scripts:reload']);
   gulp.watch('public/img/**', ['images:reload']);
 });

@@ -16,11 +16,7 @@
         <link rel="icon" href="../favicon.png" type="image/png">
         <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 
-        <link rel="stylesheet" href="../css/normalize.css">
-        <link rel="stylesheet" href="../css/hamburger.css">
-        <link rel="stylesheet" href="../css/flexslider.css">
-        <link rel="stylesheet" href="../css/animate.css">       
-        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../dist/styles.min.css">
 
         <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet"> 
 		
@@ -31,8 +27,6 @@
         <!-- jQuery -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-        <script src="../js/jquery.flexslider.js"></script>
-        <script src="../js/plugins.js"></script>
 
         
         <!--[if lt IE 9]>
@@ -51,17 +45,19 @@
         </noscript>
                 
         <nav id="mySidenav" class="sidenav">
+            <div id="sideNavText">
             <a href="../index.html">Home</a>
             <a href="../work/work.html">Work</a>
             <a href="../about.html">About</a>
             <a href="../contact.html">Contact</a>
+	    </div>
         </nav>
 
         <main class="site-wrap">
         
           <header id="top-header">
               <nav>
-                <a href="../index.html"><img class="logo" src="../img/digworx_logo_K.svg" alt="Digitalworx"></a>
+                <a href="../index.html"><img class="logo" src="../dist/img/digworx_logo_K.svg" alt="Digitalworx"></a>
                 <button class="hamburger hamburger--squeeze" type="button">
                   <span class="hamburger-box">
                   <span class="hamburger-inner"></span>
@@ -77,12 +73,12 @@
 					<p>eCommmerce &nbsp;&nbsp;&nbsp;/ &nbsp;&nbsp; Emails &nbsp;&nbsp;&nbsp;/ &nbsp;&nbsp; Design &nbsp;&nbsp;&nbsp;/ &nbsp;&nbsp; Development</p>
 			  </div>
 			  <div class="project-hero">
-			  		<img src="../img/newark-work-bnr.jpg" alt="Newark/element14">
+			  		<img src="../dist/img/newark-work-bnr.jpg" alt="Newark/element14">
 			  </div>
 		  </section>
           
           <section class="project-description">
-          	<p>Newark element14 contracted with Digitalworx to produce new web pages for their ecommerce site, emails, and online banners. Newark element14 is a high-service distributor of technology products, services and solutions for electronic system design, maintenance and repair.</p>
+          	<p>Newark element14 contracted Digitalworx to produce new web pages for their ecommerce site, emails, and online banners. Newark element14 is a high-service distributor of technology products, services and solutions for electronic system design, maintenance and repair.</p>
           	<p>Our most recent projects with Newark element14 were to produce two new, enhanced web pages for element14's ecommerce site. We redesigned and developed their Design Center and Design and Custom Manufacturing Services pages. Below are the original design comps for those two pages and links to the live pages on the Newark element14 site.</p>
           	<p>In addition, there are samples below of other pages designed for the Newark ecommerce site.</p>          	        	
           </section>
@@ -90,30 +86,30 @@
           <section class="samples clearfix">
 			<p>Original Design for Design Services Page</p>
           	<a href="https://www.element14.com/community/community/designcenter/software?ICID=menubar_designcenter_software" target="_blank">VIEW DESIGN CENTER PAGE ON LIVE SITE</a>         	
-          	<img class="has-caption" src="../img/newark-des-center-smple.jpg" alt="element14 Design Services Page Design" >
+          	<img class="has-caption" src="../dist/img/newark-des-center-smple.jpg" alt="element14 Design Services Page Design" >
           </section>
           
           <section class="samples clearfix">
 			<p>Original Design for Design and Custom Manufacturing Services Page</p>
           	<a href="https://www.element14.com/community/docs/DOC-77184?ICID=menubar_designcenter_designmfg" target="_blank">VIEW DESIGN SERVICES PAGE ON LIVE SITE</a>         	
-          	<img class="has-caption" src="../img/newark-des-services-smple.jpg" alt="element14 Design and Custom Manufacturing Services Page Desigp" >
+          	<img class="has-caption" src="../dist/img/newark-des-services-smple.jpg" alt="element14 Design and Custom Manufacturing Services Page Desigp" >
           </section>
           
            <section class="samples clearfix">
 			<p>Original Design for Test & Measurement Page</p>        	
-          	<img class="has-caption" src="../img/newark_scope_sample.jpg" alt="Newark Test & Measurement" >
+          	<img class="has-caption" src="../dist/img/newark_scope_sample.jpg" alt="Newark Test & Measurement" >
           </section>         
           
            <section class="samples clearfix">
 			<p>Original Design for Oscilloscopes & Analyzers Page</p>        	
-          	<img class="has-caption" src="../img/newark_analyzers_sample.jpg" alt="Newark Test & Measurement" >
+          	<img class="has-caption" src="../dist/img/newark_analyzers_sample.jpg" alt="Newark Test & Measurement" >
           </section>             
           
          
           <footer id="footer">
           	<div class="footer-group">
           	<section class="summary">
-            	<h4><img src="../img/digworx_logo_K.svg" alt="Digitalworx"></h4>
+            	<h4><img src="../dist/img/digworx_logo_K.svg" alt="Digitalworx"></h4>
                 <p class="cool-dash">—</p>
                 <p>We believe that design and storytelling matter and we never lose sight of that when designing and building brands and campaigns to promote and grow your organization.</p>
             </section>
@@ -129,7 +125,7 @@
                 <p class="cool-dash">—</p>
 				<p class="twitter"><a href="https://www.twitter.com/digitalworx" target="_blank" rel="noopener">Twitter</a></p>
 				<p class="facebook"><a href="http://www.facebook.com/digworx" target="_blank" rel="noopener">Facebook</a></p>
-				<p class="linkedin">om/company/digitalworx" target="_blank">LinkedIn</a></p>
+				<p class="linkedin"><a href="http://www.linkedin.com/company/digitalworx" target="_blank" rel="noopener">LinkedIn</a></p>             
             </section>
             </div>
             <div class="copyright">
@@ -143,10 +139,8 @@
         </main><!-- close .site-wrap --> 
 
 	
-		<script src="../js/easings.js"></script>
-        <script src="../js/plugins.js"></script>
-        <script src="../js/jquery.waypoints.min.js"></script>
-        <script src="../js/main.js"></script>
+	        <script src="../js/jquery.waypoints.min.js"></script>
+        <script src="../dist/scripts.min.js" async></script>
 
         <!-- Google Analytics -->
          <script>

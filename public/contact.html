@@ -9,18 +9,14 @@
         <meta property="og:title" content="Digitalworx: A Creative Digital Agency" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="http://digitalworx.com" />
-        <meta property="og:image" content="http://digitalworx.com/img/digitalworx.jpg" />
+        <meta property="og:image" content="http://digitalworx.com/dist/img/digitalworx.jpg" />
         <meta property="og:site_name" content="Digitalworx" />
         <meta property="og:description" content="Digitalworx is an independently owned creative digital agency located just north of Chicago. We live and breathe web design, development, and brand building." />
         <meta property="fb:admins" content="100000655145376" />
         <link rel="icon" href="favicon.png" type="image/png">
 		<link rel="apple-touch-icon" href="digworx-touch-icon-new.png">
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/hamburger.css">
-        <link rel="stylesheet" href="css/flexslider.css">
-        <link rel="stylesheet" href="css/animate.css">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="dist/styles.min.css">
 
         <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet"> 
 		
@@ -30,10 +26,9 @@
 		<script src="https://use.fontawesome.com/1d6ee5cd68.js"></script>
 	
         <!-- jQuery -->
-<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+		<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
-        <script src="js/jquery.flexslider.js"></script>
-        <script src="js/plugins.js"></script>
+
 
         
         <!--[if lt IE 9]>
@@ -52,17 +47,19 @@
         </noscript>
                 
         <nav id="mySidenav" class="sidenav">
+          <div id="sideNavText">          
             <a href="index.html">Home</a>
             <a href="work/work.html">Work</a>
             <a href="about.html">About</a>
             <a href="">Contact</a>
+			</div>
         </nav>
 
         <main class="site-wrap">
         
           <header id="top-header">
               <nav>
-                <h1 class="site-logo"><a href="index.html"><img class="logo" src="img/digworx_logo_K.svg" alt="Creative digital design agency in Evanston. We design and develop websites, emails, online ads."></a></h1>
+                <h1 class="site-logo"><a href="index.html"><img class="logo" src="dist/img/digworx_logo_K.svg" alt="Creative digital design agency in Evanston. We design and develop websites, emails, online ads."></a></h1>
                 <button class="hamburger hamburger--squeeze" type="button">
                   <span class="hamburger-box">
                   <span class="hamburger-inner"></span>
@@ -73,7 +70,7 @@
           
           <h1 class="page-head">Say hello.</h1>
               <div class="top-banner">
-			  <img src="img/contact_banner.jpg" alt="Meeting Room">
+			  <img src="dist/img/contact_banner.jpg" alt="Meeting Room">
 			  </div>
           <section class="hello">
   				<p>Digitalworx is located in Evanston just north of Chicago. We are here weekdays 9 – 6 (sometimes later). Whether by phone, Skype, email or in person, we'd love to learn about your upcoming project and tell you about our capabilities.</p>
@@ -98,7 +95,7 @@
     <footer id="footer">
        	   <div class="footer-group">
           	<section class="summary">
-            	<h4><img src="img/digworx_logo_K.svg" alt="Digitalworx"></h4>
+            	<h4><img src="dist/img/digworx_logo_K.svg" alt="Digitalworx"></h4>
                 <p class="cool-dash">—</p>
                 <p>We believe that design and storytelling matter and we never lose sight of that when designing and building brands and campaigns to promote and grow your organization.</p>
             </section>
@@ -122,15 +119,12 @@
         <small>©2017 Digitalworx. All Rights Reserved.</small>
             </div>
       </footer>
-
           
     </main><!-- close .site-wrap --> 
 
-	
-		<script src="js/easings.js"></script>
-        <script src="js/plugins.js"></script>
+
         <script src="js/jquery.waypoints.min.js"></script>
-        <script src="js/main.js"></script>
+        <script src="dist/scripts.min.js" async></script>
 
         <!-- Google Analytics -->
 	<script>
